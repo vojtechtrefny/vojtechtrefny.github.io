@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>main_menu Module &mdash; blivet-gui 0.1.0 documentation</title>
+    <title>main_menu Module &mdash; blivet-gui 0.1.8 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.1.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="blivet-gui 0.1.0 documentation" href="index.html" /> 
+    <link rel="top" title="blivet-gui 0.1.8 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -49,14 +49,14 @@
   <div class="section" id="main-menu-module">
 <h1>main_menu Module<a class="headerlink" href="#main-menu-module" title="Permalink to this headline">¶</a></h1>
 <p class="graphviz">
-<img src="_images/inheritance-b5af1bb0832f73299868b5469cd6475486509479.png" alt="Inheritance diagram of main_menu" usemap="#inheritancea373ff13f5" class="inheritance"/>
+<img src="_images/inheritance-5ac7347412a92abe5e8268103f7bb5a09337670a.png" alt="Inheritance diagram of main_menu" usemap="#inheritancea373ff13f5" class="inheritance"/>
 <map id="inheritancea373ff13f5" name="inheritancea373ff13f5">
-<area shape="rect" id="node1" href="#main_menu.main_menu" title="main_menu.main_menu" alt="" coords="5,6,184,31"/>
+<area shape="rect" id="node1" href="#main_menu.MainMenu" title="main_menu.MainMenu" alt="" coords="5,6,171,31"/>
 </map>
 </p>
 <span class="target" id="module-main_menu"></span><dl class="class">
-<dt id="main_menu.main_menu">
-<em class="property">class </em><tt class="descclassname">main_menu.</tt><tt class="descname">main_menu</tt><big>(</big><em>main_window</em>, <em>list_partitions</em>, <em>list_devices</em><big>)</big><a class="headerlink" href="#main_menu.main_menu" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu">
+<em class="property">class </em><tt class="descclassname">main_menu.</tt><tt class="descname">MainMenu</tt><big>(</big><em>main_window</em>, <em>list_partitions</em>, <em>list_devices</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Main menu for blivet-gui</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -70,8 +70,8 @@
 </tbody>
 </table>
 <dl class="method">
-<dt id="main_menu.main_menu.activate_menu_items">
-<tt class="descname">activate_menu_items</tt><big>(</big><em>menu_item_names</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.activate_menu_items" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.activate_menu_items">
+<tt class="descname">activate_menu_items</tt><big>(</big><em>menu_item_names</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.activate_menu_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate selected menu items</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -84,44 +84,38 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.add_edit_menu">
-<tt class="descname">add_edit_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.main_menu.add_edit_menu" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.add_edit_menu">
+<tt class="descname">add_edit_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.MainMenu.add_edit_menu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Menu item &#8216;Edit&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.add_file_menu">
-<tt class="descname">add_file_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.main_menu.add_file_menu" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.add_file_menu">
+<tt class="descname">add_file_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.MainMenu.add_file_menu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Menu item &#8216;File&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.add_help_menu">
-<tt class="descname">add_help_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.main_menu.add_help_menu" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.add_help_menu">
+<tt class="descname">add_help_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.MainMenu.add_help_menu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Menu item &#8216;Help&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.add_lvm_menu">
-<tt class="descname">add_lvm_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.main_menu.add_lvm_menu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Menu item &#8216;LVM&#8217;</p>
+<dt id="main_menu.MainMenu.add_partition_menu">
+<tt class="descname">add_partition_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.MainMenu.add_partition_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Menu item &#8216;Partition&#8217; #FIXME: &#8216;device&#8217; menu now</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.add_partition_menu">
-<tt class="descname">add_partition_menu</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.main_menu.add_partition_menu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Menu item &#8216;Partition&#8217;</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="main_menu.main_menu.deactivate_all">
-<tt class="descname">deactivate_all</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.main_menu.deactivate_all" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.deactivate_all">
+<tt class="descname">deactivate_all</tt><big>(</big><big>)</big><a class="headerlink" href="#main_menu.MainMenu.deactivate_all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deactivate all partition based buttons</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.deactivate_menu_items">
-<tt class="descname">deactivate_menu_items</tt><big>(</big><em>menu_item_names</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.deactivate_menu_items" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.deactivate_menu_items">
+<tt class="descname">deactivate_menu_items</tt><big>(</big><em>menu_item_names</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.deactivate_menu_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deactivate selected buttons</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -134,78 +128,95 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="main_menu.main_menu.get_main_menu">
-<tt class="descname">get_main_menu</tt><a class="headerlink" href="#main_menu.main_menu.get_main_menu" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.get_main_menu">
+<tt class="descname">get_main_menu</tt><a class="headerlink" href="#main_menu.MainMenu.get_main_menu" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_about_item">
-<tt class="descname">on_about_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_about_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_about_item">
+<tt class="descname">on_about_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_about_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;About&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_add_item">
-<tt class="descname">on_add_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_add_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_add_item">
+<tt class="descname">on_add_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_add_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;New&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_apply_item">
-<tt class="descname">on_apply_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_apply_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_apply_item">
+<tt class="descname">on_apply_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_apply_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Apply Queued Actions&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_clear_item">
-<tt class="descname">on_clear_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_clear_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_clear_item">
+<tt class="descname">on_clear_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_clear_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Clear Queued Actions&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_delete_item">
-<tt class="descname">on_delete_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_delete_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_decrypt_item">
+<tt class="descname">on_decrypt_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_decrypt_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Onselect action for &#8216;Decrypt&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="main_menu.MainMenu.on_delete_item">
+<tt class="descname">on_delete_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_delete_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Delete&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_edit_item">
-<tt class="descname">on_edit_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_edit_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_edit_item">
+<tt class="descname">on_edit_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_edit_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Edit&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_help_item">
-<tt class="descname">on_help_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_help_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_help_item">
+<tt class="descname">on_help_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_help_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Help&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_pv_item">
-<tt class="descname">on_pv_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_pv_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_pv_item">
+<tt class="descname">on_pv_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_pv_item" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_quit_item">
-<tt class="descname">on_quit_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_quit_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_quit_item">
+<tt class="descname">on_quit_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_quit_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Quit&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_umount_item">
-<tt class="descname">on_umount_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_umount_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_redo_item">
+<tt class="descname">on_redo_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_redo_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Onselect action for &#8216;Redo Last Action&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="main_menu.MainMenu.on_reload_item">
+<tt class="descname">on_reload_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_reload_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="main_menu.MainMenu.on_umount_item">
+<tt class="descname">on_umount_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_umount_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Unmount&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_undo_item">
-<tt class="descname">on_undo_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_undo_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_undo_item">
+<tt class="descname">on_undo_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_undo_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onselect action for &#8216;Undo Last Action&#8217;</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="main_menu.main_menu.on_vg_item">
-<tt class="descname">on_vg_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.main_menu.on_vg_item" title="Permalink to this definition">¶</a></dt>
+<dt id="main_menu.MainMenu.on_vg_item">
+<tt class="descname">on_vg_item</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#main_menu.MainMenu.on_vg_item" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -249,7 +260,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

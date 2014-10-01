@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>utils Module &mdash; blivet-gui 0.1.0 documentation</title>
+    <title>utils Module &mdash; blivet-gui 0.1.8 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.1.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="blivet-gui 0.1.0 documentation" href="index.html" /> 
+    <link rel="top" title="blivet-gui 0.1.8 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,32 +57,21 @@
 </p>
 <span class="target" id="module-utils"></span><dl class="class">
 <dt id="utils.BlivetUtils">
-<em class="property">class </em><tt class="descclassname">utils.</tt><tt class="descname">BlivetUtils</tt><a class="headerlink" href="#utils.BlivetUtils" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">utils.</tt><tt class="descname">BlivetUtils</tt><big>(</big><em>main_window</em>, <em>kickstart=False</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class with utils directly working with blivet itselves</p>
 <dl class="method">
 <dt id="utils.BlivetUtils.add_device">
-<tt class="descname">add_device</tt><big>(</big><em>parent_names</em>, <em>device_type</em>, <em>fs_type</em>, <em>target_size</em>, <em>name=None</em>, <em>label=None</em>, <em>flags=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#utils.BlivetUtils.add_device" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">add_device</tt><big>(</big><em>user_input</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.add_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create new device</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>parent_names</strong> (<em>list of str</em>) &#8211; name of parent devices</li>
-<li><strong>device_type</strong> (<em>str</em>) &#8211; type of device to create</li>
-<li><strong>fs_type</strong> (<em>str</em>) &#8211; filesystem</li>
-<li><strong>target_size</strong> (<em>int</em>) &#8211; target size</li>
-<li><strong>name</strong> (<em>str</em>) &#8211; device name</li>
-<li><strong>label</strong> (<em>str</em>) &#8211; device label</li>
-<li><strong>flags</strong> (<em>list of str</em>) &#8211; device flags</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user_input</strong> (<em>class UserInput</em>) &#8211; selected parameters from AddDialog</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">new device name</p>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">new device name</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
-</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>
@@ -95,6 +84,11 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="utils.BlivetUtils.blivet_reload">
+<tt class="descname">blivet_reload</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.blivet_reload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="utils.BlivetUtils.blivet_reset">
 <tt class="descname">blivet_reset</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.blivet_reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Blivet.reset()</p>
@@ -102,27 +96,37 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.create_disk_label">
-<tt class="descname">create_disk_label</tt><big>(</big><em>disk_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.create_disk_label" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_disk_label</tt><big>(</big><em>blivet_device</em>, <em>label_type</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.create_disk_label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create disklabel</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>disk_name</strong> &#8211; disk name</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</li>
+<li><strong>label_type</strong> (<em>str</em>) &#8211; type of label to create</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="method">
+<dt id="utils.BlivetUtils.create_kickstart_file">
+<tt class="descname">create_kickstart_file</tt><big>(</big><em>fname</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.create_kickstart_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create kickstart config file</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="utils.BlivetUtils.delete_device">
-<tt class="descname">delete_device</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.delete_device" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">delete_device</tt><big>(</big><em>blivet_device</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.delete_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete device</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device_name</strong> (<em>str</em>) &#8211; name of device</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</td>
 </tr>
 </tbody>
 </table>
@@ -130,13 +134,13 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.device_resizable">
-<tt class="descname">device_resizable</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.device_resizable" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">device_resizable</tt><big>(</big><em>blivet_device</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.device_resizable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is given device resizable</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device_name</strong> (<em>str</em>) &#8211; name of device</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">device resizable, minSize, maxSize, size</td>
 </tr>
@@ -148,14 +152,14 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.edit_partition_device">
-<tt class="descname">edit_partition_device</tt><big>(</big><em>device_name</em>, <em>settings</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.edit_partition_device" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">edit_partition_device</tt><big>(</big><em>blivet_device</em>, <em>settings</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.edit_partition_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Edit device</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>device_name</strong> (<em>str</em>) &#8211; name of device</li>
+<li><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet.Device</li>
 <li><strong>settings</strong> (<em>tuple</em>) &#8211; resize, target_size, target_fs</li>
 </ul>
 </td>
@@ -171,9 +175,25 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="utils.BlivetUtils.get_available_disklabels">
+<tt class="descname">get_available_disklabels</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_available_disklabels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return disklabels available on current platform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of disklabel types</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="utils.BlivetUtils.get_blivet_device">
 <tt class="descname">get_blivet_device</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_blivet_device" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get blivet device</p>
+<dd><p>Get blivet device by name</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -189,18 +209,50 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="utils.BlivetUtils.get_btrfs_volumes">
+<tt class="descname">get_btrfs_volumes</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_btrfs_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of Btrfs Volumes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of btrfs volumes</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="utils.BlivetUtils.get_device_type">
-<tt class="descname">get_device_type</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_device_type" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_device_type</tt><big>(</big><em>blivet_device</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_device_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get device type</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device_name</strong> (<em>str</em>) &#8211; device name</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blivet_device</strong> &#8211; blivet device</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">type of device</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="utils.BlivetUtils.get_disk_names">
+<tt class="descname">get_disk_names</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_disk_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of names of all disk devices on current system</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of all &#8220;disk&#8221; devices names</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
 </tr>
 </tbody>
 </table>
@@ -223,6 +275,12 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="utils.BlivetUtils.get_free_disks_info">
+<tt class="descname">get_free_disks_info</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_free_disks_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of disks with free space</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="utils.BlivetUtils.get_free_pvs_info">
 <tt class="descname">get_free_pvs_info</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_free_pvs_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of PVs without VGs</p>
@@ -240,14 +298,14 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.get_free_space">
-<tt class="descname">get_free_space</tt><big>(</big><em>device_name</em>, <em>partitions</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_free_space" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_free_space</tt><big>(</big><em>blivet_device</em>, <em>partitions</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_free_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find free space on device</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>device_name</strong> (<em>str</em>) &#8211; name of device</li>
+<li><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</li>
 <li><strong>paritions</strong> &#8211; partions (children) of device</li>
 </ul>
 </td>
@@ -280,13 +338,13 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.get_parent_pvs">
-<tt class="descname">get_parent_pvs</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_parent_pvs" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_parent_pvs</tt><big>(</big><em>blivet_device</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_parent_pvs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of LVM VG PVs</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device_name</strong> (<em>str</em>) &#8211; device name</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of devices</td>
 </tr>
@@ -298,13 +356,13 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.get_partitions">
-<tt class="descname">get_partitions</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_partitions" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_partitions</tt><big>(</big><em>blivet_device</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.get_partitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get partitions (children) of selected device</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device_name</strong> (<em>str</em>) &#8211; name of device</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of partitions</td>
 </tr>
@@ -332,13 +390,13 @@
 
 <dl class="method">
 <dt id="utils.BlivetUtils.has_disklabel">
-<tt class="descname">has_disklabel</tt><big>(</big><em>device_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.has_disklabel" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">has_disklabel</tt><big>(</big><em>blivet_device</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.has_disklabel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Has this disk device disklabel</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device_name</strong> (<em>str</em>) &#8211; device name</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blivet_device</strong> (<em>blivet.Device</em>) &#8211; blivet device</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">true/false</td>
 </tr>
@@ -348,18 +406,66 @@
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="utils.BlivetUtils.kickstart_mountpoints">
+<tt class="descname">kickstart_mountpoints</tt><big>(</big><big>)</big><a class="headerlink" href="#utils.BlivetUtils.kickstart_mountpoints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="utils.BlivetUtils.kickstart_use_disks">
+<tt class="descname">kickstart_use_disks</tt><big>(</big><em>disk_names</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.kickstart_use_disks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="utils.BlivetUtils.luks_decrypt">
+<tt class="descname">luks_decrypt</tt><big>(</big><em>blivet_device</em>, <em>passphrase</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.luks_decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrypt selected luks device</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>blivet_device</strong> (<em>LUKSDevice</em>) &#8211; device to decrypt</li>
+<li><strong>passphrase</strong> (<em>str</em>) &#8211; passphrase</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="utils.BlivetUtils.override_devicetree">
+<tt class="descname">override_devicetree</tt><big>(</big><em>devicetree</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.override_devicetree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="utils.BlivetUtils.return_devicetree">
+<tt class="descname">return_devicetree</tt><a class="headerlink" href="#utils.BlivetUtils.return_devicetree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="utils.BlivetUtils.set_bootloader_device">
+<tt class="descname">set_bootloader_device</tt><big>(</big><em>disk_name</em><big>)</big><a class="headerlink" href="#utils.BlivetUtils.set_bootloader_device" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="utils.FreeSpaceDevice">
-<em class="property">class </em><tt class="descclassname">utils.</tt><tt class="descname">FreeSpaceDevice</tt><big>(</big><em>free_size</em><big>)</big><a class="headerlink" href="#utils.FreeSpaceDevice" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">utils.</tt><tt class="descname">FreeSpaceDevice</tt><big>(</big><em>free_size</em>, <em>parents</em>, <em>logical=False</em><big>)</big><a class="headerlink" href="#utils.FreeSpaceDevice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Special class to represent free space on disk (device)
 (blivet doesn&#8217;t have class/device to represent free space)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>free_size</strong> (<em>int</em>) &#8211; size of free space in MB</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>free_size</strong> (<em>blivet.Size</em>) &#8211; size of free space</li>
+<li><strong>parents</strong> (<em>list #FIXME blivet.devices.ParentList</em>) &#8211; list of parent devices</li>
+<li><strong>logical</strong> (<em>bool</em>) &#8211; is this free space inside extended partition</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -407,6 +513,20 @@
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="utils.swap_is_on">
+<tt class="descclassname">utils.</tt><tt class="descname">swap_is_on</tt><big>(</big><em>sysfs_path</em><big>)</big><a class="headerlink" href="#utils.swap_is_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is selected swap in use?</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sysfs_path</strong> (<em>str</em>) &#8211; sysfs path for swap</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 
 
@@ -446,7 +566,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

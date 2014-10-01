@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>list_devices Module &mdash; blivet-gui 0.1.0 documentation</title>
+    <title>list_devices Module &mdash; blivet-gui 0.1.8 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.1.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="blivet-gui 0.1.0 documentation" href="index.html" /> 
+    <link rel="top" title="blivet-gui 0.1.8 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -56,12 +56,17 @@
 </p>
 <span class="target" id="module-list_devices"></span><dl class="class">
 <dt id="list_devices.ListDevices">
-<em class="property">class </em><tt class="descclassname">list_devices.</tt><tt class="descname">ListDevices</tt><big>(</big><em>Builder</em><big>)</big><a class="headerlink" href="#list_devices.ListDevices" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">list_devices.</tt><tt class="descname">ListDevices</tt><big>(</big><em>main_window</em>, <em>Builder</em>, <em>kickstart=False</em><big>)</big><a class="headerlink" href="#list_devices.ListDevices" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Builder</strong> (<em>Gtk.Builder</em>) &#8211; glade builder</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>main_window</strong> (<em>Gtk.Window</em>) &#8211; main window instance</li>
+<li><strong>Builder</strong> (<em>Gtk.Builder</em>) &#8211; glade builder</li>
+<li><strong>kickstart</strong> (<em>bool</em>) &#8211; use blivet-gui in kickstart mode</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -80,6 +85,12 @@
 <dt id="list_devices.ListDevices.get_partions_list">
 <tt class="descname">get_partions_list</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.get_partions_list" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="list_devices.ListDevices.load_btrfs_volumes">
+<tt class="descname">load_btrfs_volumes</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.load_btrfs_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load Btrfs Volumes</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="list_devices.ListDevices.load_devices">
@@ -112,51 +123,14 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="list_devices.ListDevices.return_actions_view">
-<tt class="descname">return_actions_view</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.return_actions_view" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="list_devices.ListDevices.return_device_list">
 <tt class="descname">return_device_list</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.return_device_list" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="list_devices.ListDevices.return_partitions_image">
-<tt class="descname">return_partitions_image</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.return_partitions_image" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="list_devices.ListDevices.return_partitions_view">
-<tt class="descname">return_partitions_view</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.return_partitions_view" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="list_devices.ListDevices.update_devices_view">
-<tt class="descname">update_devices_view</tt><big>(</big><em>action</em>, <em>parent_device</em>, <em>changed_device</em><big>)</big><a class="headerlink" href="#list_devices.ListDevices.update_devices_view" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">update_devices_view</tt><big>(</big><big>)</big><a class="headerlink" href="#list_devices.ListDevices.update_devices_view" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update device view</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>action</strong> (<em>str</em>) &#8211; reason to update (delete/add/all)</li>
-<li><strong>parent_device</strong> &#8211; parent device for device to change</li>
-<li><strong>device_changed</strong> (<em>str</em>) &#8211; added/deleted device</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">After removing or adding VGs or PVs it is neccesary to add or remove
-these devices from device list.
-After removing all queud actions it is neccesary to go through list of
-devices and find if they are still in devicetree and also go through
-devicetree and find if those devices are in device list.
-This function will update the Gtk.ListStore.</p>
-</div>
 </dd></dl>
 
 </dd></dl>
@@ -200,7 +174,7 @@ This function will update the Gtk.ListStore.</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

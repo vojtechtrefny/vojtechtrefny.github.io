@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>actions_toolbar Module &mdash; blivet-gui 0.1.0 documentation</title>
+    <title>actions_toolbar Module &mdash; blivet-gui 0.1.8 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.1.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="blivet-gui 0.1.0 documentation" href="index.html" /> 
+    <link rel="top" title="blivet-gui 0.1.8 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -56,7 +56,7 @@
 </p>
 <span class="target" id="module-actions_toolbar"></span><dl class="class">
 <dt id="actions_toolbar.actions_toolbar">
-<em class="property">class </em><tt class="descclassname">actions_toolbar.</tt><tt class="descname">actions_toolbar</tt><big>(</big><em>list_partitions</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">actions_toolbar.</tt><tt class="descname">actions_toolbar</tt><big>(</big><em>list_partitions</em>, <em>main_window</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create toolbar with action buttons</p>
 <dl class="method">
 <dt id="actions_toolbar.actions_toolbar.activate_buttons">
@@ -122,6 +122,12 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="actions_toolbar.actions_toolbar.on_decrypt_clicked">
+<tt class="descname">on_decrypt_clicked</tt><big>(</big><em>button</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar.on_decrypt_clicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Onclick action for decrypt button</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="actions_toolbar.actions_toolbar.on_delete_clicked">
 <tt class="descname">on_delete_clicked</tt><big>(</big><em>button</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar.on_delete_clicked" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onclick action for delete button</p>
@@ -134,9 +140,21 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="actions_toolbar.actions_toolbar.on_redo_clicked">
+<tt class="descname">on_redo_clicked</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar.on_redo_clicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Onselect action for &#8216;Redo&#8217; button</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="actions_toolbar.actions_toolbar.on_umount_clicked">
 <tt class="descname">on_umount_clicked</tt><big>(</big><em>button</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar.on_umount_clicked" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onclick action for umount button</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="actions_toolbar.actions_toolbar.on_undo_clicked">
+<tt class="descname">on_undo_clicked</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#actions_toolbar.actions_toolbar.on_undo_clicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Onselect action for &#8216;Undo&#8217; button</p>
 </dd></dl>
 
 </dd></dl>
@@ -180,7 +198,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

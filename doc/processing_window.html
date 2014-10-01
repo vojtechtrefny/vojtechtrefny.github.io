@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>processing_window Module &mdash; blivet-gui 0.1.0 documentation</title>
+    <title>processing_window Module &mdash; blivet-gui 0.1.8 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.1.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="blivet-gui 0.1.0 documentation" href="index.html" /> 
+    <link rel="top" title="blivet-gui 0.1.8 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -49,23 +49,28 @@
   <div class="section" id="processing-window-module">
 <h1>processing_window Module<a class="headerlink" href="#processing-window-module" title="Permalink to this headline">¶</a></h1>
 <p class="graphviz">
-<img src="_images/inheritance-b67d2b8994071984036152a17bbb2e502976c02c.png" alt="Inheritance diagram of processing_window" usemap="#inheritance974f3a208e" class="inheritance"/>
+<img src="_images/inheritance-295d809ca3b49abdc474b0a2853ac59e39b330bd.png" alt="Inheritance diagram of processing_window" usemap="#inheritance974f3a208e" class="inheritance"/>
 <map id="inheritance974f3a208e" name="inheritance974f3a208e">
-<area shape="rect" id="node1" href="#processing_window.ProcessingActions" title="processing_window.ProcessingActions" alt="" coords="205,827,467,853"/>
+<area shape="rect" id="node7" href="#processing_window.ProcessingActions" title="processing_window.ProcessingActions" alt="" coords="237,977,499,1002"/>
 </map>
 </p>
 <span class="target" id="module-processing_window"></span><dl class="class">
 <dt id="processing_window.ProcessingActions">
-<em class="property">class </em><tt class="descclassname">processing_window.</tt><tt class="descname">ProcessingActions</tt><big>(</big><em>list_partitions</em><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">gi.overrides.Gtk.Window</span></tt></p>
+<em class="property">class </em><tt class="descclassname">processing_window.</tt><tt class="descname">ProcessingActions</tt><big>(</big><em>list_partitions</em>, <em>parent_window</em><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">gi.overrides.Gtk.Dialog</span></tt></p>
 <dl class="method">
 <dt id="processing_window.ProcessingActions.close_window">
 <tt class="descname">close_window</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions.close_window" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="processing_window.ProcessingActions.do_it">
+<tt class="descname">do_it</tt><big>(</big><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions.do_it" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="processing_window.ProcessingActions.end">
-<tt class="descname">end</tt><big>(</big><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions.end" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">end</tt><big>(</big><em>error=None</em><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions.end" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -73,17 +78,7 @@
 <tt class="descname">on_timeout</tt><big>(</big><em>user_data</em><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions.on_timeout" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="processing_window.ProcessingActions.start">
-<tt class="descname">start</tt><big>(</big><big>)</big><a class="headerlink" href="#processing_window.ProcessingActions.start" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
-
-<dl class="function">
-<dt id="processing_window.do_it">
-<tt class="descclassname">processing_window.</tt><tt class="descname">do_it</tt><big>(</big><em>window</em>, <em>list_partitions</em><big>)</big><a class="headerlink" href="#processing_window.do_it" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </div>
 
@@ -124,7 +119,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="index.html">blivet-gui 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">blivet-gui 0.1.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
