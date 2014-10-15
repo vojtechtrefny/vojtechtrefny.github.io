@@ -29,19 +29,15 @@
 <a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">LVM2 Volume Group in blivet-gui</span></h3></div>
 <div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="images/lvm2-vg.png" width="600" class="media media-block" alt=""></div></div></div></div>
 </div></div>
-<p class="p">Volume groups and physical volumes are displayed in their specific section in device list at the left side of
-	blivet-gui window.</p>
+<p class="p">Volume groups in the specific section in the device list at the left side of blivet-gui window.</p>
 <p class="p">Physical volumes can contain one volume group, volume groups can contain (in theory) infinite number of logical volumes.</p>
-<p class="p">In the image shown above, there are two volume groups - <span class="em">fedora</span> placed on sda2 physical volume and <span class="em">fedora-lvm</span>
-	placed on two physical volumes - sdb1 and sdc1.</p>
+<p class="p">In the image shown above, there is one volume groups - <span class="em">fedora</span> placed on two physical volumes - sda2 and sdb1.</p>
 </div></div>
 </div></div>
 <div id="storage" class="sect"><div class="inner">
 <div class="hgroup"><h2 class="title"><span class="title">Creating LVM2 Storages</span></h2></div>
 <div class="region"><div class="contents">
 <p class="p">LVM2 Storage represents whole LVM2 "ecosystem" - by creating it you will create physical volume with volume group.</p>
-<div class="note note-tip" title="Tip"><div class="inner"><div class="region"><div class="contents"><p class="p">This option currently doesn't support create storage with multiple physical volumes. If you need this setup, you'll need
-  to create multiple physical volumes first and then create new volume group.</p></div></div></div></div>
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">Select a disk with free space from the list of <span class="gui">Disks</span>.</p></li>
 <li class="steps"><p class="p">From <span class="gui">Partitions</span> tab select <span class="em">free space</span> line.</p></li>
@@ -54,8 +50,10 @@
 </div></div>
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">Set <span class="gui">Device type</span> to <span class="gui">LVM2 Storage</span>.</p></li>
+<li class="steps"><p class="p">From list of <span class="gui">Available devices</span> select at least one free space (the one selected in previous steps will pre-selected).</p></li>
 <li class="steps"><p class="p">Set size for your storage.</p></li>
 <li class="steps"><p class="p">Set <span class="gui">Name</span> for your volume group (if left blank, system will choose name based on machine <span class="em">hostname</span>).</p></li>
+<li class="steps"><p class="p">It's possible to create encrypted LVM using LUKS/dm-crypt. Check <span class="gui">Encrypt</span> option and fill in passphrase.</p></li>
 <li class="steps"><p class="p">Hit <span class="gui">OK</span> to create volume.</p></li>
 </ol></div></div></div>
 <div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">All changes you make are only temporary. They won't be written to disks until you use the <span class="gui">Apply</span> button. See <span class="link"><a href="actions.html" title="Actions">Actions</a></span>.</p></div></div></div></div>
@@ -65,8 +63,8 @@
 <div class="hgroup"><h2 class="title"><span class="title">Creating LVM2 Volume Groups</span></h2></div>
 <div class="region"><div class="contents">
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
-<li class="steps"><p class="p">Select a physical volume without volume group from the list of <span class="gui">LVM2 Physical Volume</span>.</p></li>
-<li class="steps"><p class="p">From <span class="gui">Partitions</span> tab select <span class="em">free space</span> line.</p></li>
+<li class="steps"><p class="p">Select a disk with an empty physical volume from the list of <span class="gui">Disks</span>.</p></li>
+<li class="steps"><p class="p">From <span class="gui">Partitions</span> tab select <span class="em">free space</span> in this volume.</p></li>
 <li class="steps"><p class="p">Click on <span class="gui">Add</span> button in toolbar or just press <span class="key"><kbd>Insert</kbd></span>.</p></li>
 </ol></div></div></div>
 <p class="p">Create new device window will be opened.</p>
@@ -133,9 +131,9 @@ LVM2 logical volumes, then delete the volume group and at last delete all physic
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">From list of devices in section <span class="gui">LVM2 Volume Groups</span> select storage you would like to delete and delete all logical volumes
   on it. (Use the same process as when deleting partition. See <span class="link"><a href="partitioning.html" title="Partitioning">Partitioning</a></span> for more information.)</p></li>
-<li class="steps"><p class="p">From list of devices in section <span class="gui">LVM2 Physical Volumes</span> select one of the volumes hosting volume group you'd like to delete.
+<li class="steps"><p class="p">From list of devices in section <span class="gui">Disks</span> select one of the disks hosting volumes with the volume group you'd like to delete.
   (It doesn't matter which one.)</p></li>
-<li class="steps"><p class="p">From list of devices in section <span class="gui">Disks</span> select disk with physical volume and delete it.</p></li>
+<li class="steps"><p class="p">Select the physical volume and delete it.</p></li>
 <li class="steps"><p class="p">Repeat previous for all physical volumes you'd like to delete.</p></li>
 </ol></div></div></div>
 <div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">All changes you make are only temporary. They won't be written to disks until you use the <span class="gui">Apply</span> button. See <span class="link"><a href="actions.html" title="Actions">Actions</a></span>.</p></div></div></div></div>
