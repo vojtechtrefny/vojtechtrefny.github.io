@@ -51,10 +51,11 @@
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">Set <span class="gui">Device type</span> to <span class="gui">LVM2 Storage</span>.</p></li>
 <li class="steps"><p class="p">From list of <span class="gui">Available devices</span> select at least one free space (the one selected in previous steps will pre-selected).</p></li>
-<li class="steps"><p class="p">Set size for your storage.</p></li>
+<li class="steps"><p class="p">Select the amout of space used from every "parent" device selected in previous step.</p></li>
 <li class="steps"><p class="p">Set <span class="gui">Name</span> for your volume group (if left blank, system will choose name based on machine <span class="em">hostname</span>).</p></li>
 <li class="steps"><p class="p">It's possible to create encrypted LVM using LUKS/dm-crypt. Check <span class="gui">Encrypt</span> option and fill in passphrase.</p></li>
-<li class="steps"><p class="p">Hit <span class="gui">OK</span> to create volume.</p></li>
+<li class="steps"><p class="p">Under <span class="gui">Advanced options</span> is possible to select <span class="em">physical extents</span> size.</p></li>
+<li class="steps"><p class="p">Hit <span class="gui">OK</span> to create the storage.</p></li>
 </ol></div></div></div>
 <div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">All changes you make are only temporary. They won't be written to disks until you use the <span class="gui">Apply</span> button. See <span class="link"><a href="actions.html" title="Actions">Actions</a></span>.</p></div></div></div></div>
 </div></div>
@@ -75,6 +76,7 @@
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">From list of <span class="gui">Available devices</span> select at least one free physical volume (the one selected in previous steps will pre-selected).</p></li>
 <li class="steps"><p class="p">Set <span class="gui">Name</span> for your volume group (if left blank, system will choose name based on machine <span class="em">hostname</span>).</p></li>
+<li class="steps"><p class="p">It's possible to create encrypted LVM using LUKS/dm-crypt. Check <span class="gui">Encrypt</span> option and fill in passphrase.</p></li>
 <li class="steps"><p class="p">Hit <span class="gui">OK</span> to create volume.</p></li>
 </ol></div></div></div>
 <div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">All changes you make are only temporary. They won't be written to disks until you use the <span class="gui">Apply</span> button. See <span class="link"><a href="actions.html" title="Actions">Actions</a></span>.</p></div></div></div></div>
@@ -117,7 +119,7 @@
 </div></div>
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">Set size for your new logical volume.</p></li>
-<li class="steps"><p class="p">Choose <span class="gui">Filesystem</span>. Optionally you can set <span class="gui">Label</span> and <span class="gui">Name</span> too.</p></li>
+<li class="steps"><p class="p">Choose <span class="gui">Filesystem</span>. Optionally you can set <span class="gui">Name</span> too.</p></li>
 <li class="steps"><p class="p">Hit <span class="gui">OK</span> to create volume.</p></li>
 </ol></div></div></div>
 <div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">All changes you make are only temporary. They won't be written to disks until you use the <span class="gui">Apply</span> button. See <span class="link"><a href="actions.html" title="Actions">Actions</a></span>.</p></div></div></div></div>
